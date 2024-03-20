@@ -12,11 +12,11 @@ const AboutUs = () => {
           height={1024}
           className=" opacity-50  object-cover w-[50vw] h-lvh"
         />
-      </div>
-      <section className="absolute -translate-y-full">
         <h2 className="absolute top-0 flex items-center justify-center h-lvh max-w-[50vw] w-full left-0 ">
           Про нас
         </h2>
+      </div>
+      <section className="absolute -translate-y-full">
         <div className="w-[50vw] h-lvh absolute right-0 top-0 bg-black flex items-center pr-pcx pl-[22px]">
           <p>
             Наш фітнес-центр Grafit Athletic - це не лише місце для занять
