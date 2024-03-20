@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Dela_Gothic_One, Roboto } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
 
 const delatGothicOne = Dela_Gothic_One({
   weight: "400",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

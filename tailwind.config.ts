@@ -17,6 +17,12 @@ const config: Config = {
       dela: ["var(--font-dela)"],
       roboto: ["var(--font-roboto)"],
     },
+    extend: {
+      spacing: {
+        pcx: "8.125rem",
+        pcy: "0.625rem",
+      },
+    },
   },
   plugins: [],
 };
