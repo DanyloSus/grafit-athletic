@@ -1,9 +1,10 @@
+import Main from "@/components/elements/Main";
 import React from "react";
 
 const Landing = () => {
   return (
     <div>
-      <h1>Sus</h1>
+      <Main />
     </div>
   );
 };

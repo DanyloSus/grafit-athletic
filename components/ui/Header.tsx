@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="py-pcy px-pcx bg-black w-lvw flex items-center justify-between static shadow-sm">
+    <header className="py-pcy px-pcx bg-black w-lvw flex items-center justify-between fixed top-0 left-0 shadow-sm z-10">
       <div className="flex gap-3 items-center">
         <Image src="./icons/Logo.svg" alt="logo" width={72} height={72} />
         <div>
