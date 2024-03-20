@@ -4,15 +4,15 @@ import Button from "../ui/Button";
 
 const Main = () => {
   return (
-    <div className="flex h-lvh w-lvw items-center px-pcx">
+    <section className="flex items-center">
       <Image
         src="/images/BG_Main.jpg"
         alt="black and white background image of dumbbell"
         width={1816}
         height={1024}
-        className="h-[1024px] w-[1816px] object-cover fixed top-0 left-0 -z-10"
+        className="h-[1024px] w-[1816px] object-cover fixed top-0 left-0 -z-[1]"
       />
-      <div className="flex flex-col items-start gap-[3.625rem] w-[712px]">
+      <div className="flex flex-col items-start gap-[3.625rem] w-[712px] relative z-[1]">
         <h1 className="text-[102.46px] leading-[100px]">
           Ви з<br />
           Grafit
@@ -37,7 +37,7 @@ const Main = () => {
           }
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -24,7 +24,15 @@ h6 {
   @apply font-dela;
 }
 
+h2 {
+  @apply text-[5rem];
+}
+
 p,
 button {
   @apply font-roboto;
+}
+
+section {
+  @apply border-b-[1px] border-b-grey h-lvh w-lvw px-pcx;
 }
