@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Dela_Gothic_One, Roboto } from "next/font/google";
 import "./globals.scss";
+import Header from "@/components/ui/Header";
 
 const delatGothicOne = Dela_Gothic_One({
   weight: "400",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${roboto.className} ${roboto.variable} ${delatGothicOne.variable}`}
       >
+        <Header />
         {children}
       </body>
     </html>
