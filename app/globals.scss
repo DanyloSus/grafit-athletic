@@ -7,8 +7,6 @@
   padding: 0;
 
   box-sizing: border-box;
-
-  @apply text-white;
 }
 
 body {
@@ -21,11 +19,15 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-dela;
+  @apply font-dela text-white;
 }
 
 h2 {
   @apply text-[5rem];
+}
+
+p {
+  @apply text-white;
 }
 
 p,
@@ -35,4 +37,28 @@ button {
 
 section {
   @apply border-b-[1px] border-b-grey min-h-lvh w-lvw px-pcx;
+}
+
+.reveal:nth-child(2n + 1) {
+  transform: translateY(150px);
+
+  opacity: 0;
+
+  transition: 1s all ease-in-out;
+}
+
+.reveal:nth-child(2n) {
+  transform: translateY(-150px);
+
+  opacity: 0;
+
+  transition: 1s all ease-in-out;
+}
+
+.reveal.active {
+  transform: translateY(0);
+
+  opacity: 1;
+
+  transition: 1s all ease-in-out;
 }
