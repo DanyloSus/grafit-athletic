@@ -1,5 +1,6 @@
 import AboutUs from "@/components/elements/AboutUs";
 import Main from "@/components/elements/Main";
+import Services from "@/components/elements/Services/Services";
 import React from "react";
 
 const Landing = () => {
@@ -7,7 +8,7 @@ const Landing = () => {
     <div>
       <Main />
       <AboutUs />
-      <Main />
+      <Services />
     </div>
   );
 };
