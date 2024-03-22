@@ -7,11 +7,12 @@ type ButtonProps = {
   isSmall?: boolean;
   isWhite?: boolean;
   icon?: ReactNode;
+  link?: string;
 };
 
 const Button = (props: ButtonProps) => {
   return (
-    <Link href="/register">
+    <Link href={props.link ? props.link : "/register"}>
       <button
         className="flex items-center gap-5 font-bold"
         style={{
