@@ -36,7 +36,7 @@ const products = [
 
 const Page = () => {
   return (
-    <section className="py-20 flex items-center flex-col gap-20">
+    <section className="py-20 flex items-center flex-col gap-10">
       <h2>Спортивні товари</h2>
       <div className="grid grid-cols-3 gap-5">
         {products.map((e, index) => (
