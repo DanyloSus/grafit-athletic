@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex flex-col gap-[2.1875rem]">
         <div className="flex gap-[0.9375rem] items-center">
           <Image
-            src="./icons/mail.svg"
+            src="/icons/mail.svg"
             alt="mail image"
             width={24}
             height={24}
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
         <div className="flex gap-[0.9375rem] items-center">
           <Image
-            src="./icons/call.svg"
+            src="/icons/call.svg"
             alt="call image"
             width={24}
             height={24}
@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="flex gap-[0.9375rem] items-center justify-end">
           <p>Коблевська вулиця, 39</p>
           <Image
-            src="./icons/location_on.svg"
+            src="/icons/location_on.svg"
             alt="location image"
             width={24}
             height={24}
@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="flex gap-[0.9375rem] items-center justify-end">
           <p>Михайла Грушевського, 15а</p>
           <Image
-            src="./icons/location_on.svg"
+            src="/icons/location_on.svg"
             alt="location image"
             width={24}
             height={24}
@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="flex gap-[0.9375rem] items-center justify-end">
           <p>Михайлівська вулиця, 44в</p>
           <Image
-            src="./icons/location_on.svg"
+            src="/icons/location_on.svg"
             alt="location image"
             width={24}
             height={24}

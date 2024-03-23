@@ -1,10 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import servicesSlice from "./services/features/servicesSlice";
 
 const store = configureStore({
-  reducer: {
-    services: servicesSlice,
-  },
+  reducer: {},
 });
 
 export default store;

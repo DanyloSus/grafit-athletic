@@ -76,7 +76,7 @@ const RegisterPage = () => {
             text="Зареєструватися"
             type="solid"
             isWhite
-            link="trainers"
+            link="signed/trainers"
             icon={
               <Image
                 src="./icons/04.svg"
