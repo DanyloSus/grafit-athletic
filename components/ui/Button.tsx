@@ -8,6 +8,7 @@ type ButtonProps = {
   isWhite?: boolean;
   icon?: ReactNode;
   link?: string;
+  isSubmit?: boolean;
 };
 
 const Button = (props: ButtonProps) => {
@@ -15,11 +16,12 @@ const Button = (props: ButtonProps) => {
     <Link href={props.link ? props.link : "/register"}>
       <button
         className="flex items-center gap-5 font-bold"
+        type={props.isSubmit ? "submit" : "button"}
         style={{
           background: props.type === "solid" ? "hsla(80,59%,39%,100%)" : "",
           border:
             props.type === "outline" ? "8px solid hsla(80,59%,39%,100%)" : "",
-          padding: props.isSmall ? "15px" : "20px",
+          padding: props.isSmall ? "7.5px 15px" : "10px 20px",
           fontSize: props.isSmall ? "25px" : "33px",
         }}
       >
