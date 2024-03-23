@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useEffect } from "react";
-import TrainerElement from "./Trainer";
+import TrainerElement from "./trainer";
 import useReveal from "@/lib/hooks/useReveal";
 
 const Trainers = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", useReveal); // add to a scroll a reveal function
+  const reveal = useReveal;
 
-    return () => {
-      window.removeEventListener("scroll", useReveal); // clean up
-    };
+  useEffect(() => {
+    reveal();
   }, []);
   return (
     <section className="flex flex-col items-center py-20">

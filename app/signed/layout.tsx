@@ -1,5 +1,5 @@
 import Footer from "@/components/ui/Footer";
-import Header from "@/components/ui/Header";
+import HeaderSigned from "@/components/ui/HeaderSigned";
 import React, { ReactNode } from "react";
 
 type ChildrenProps = {
@@ -9,7 +9,7 @@ type ChildrenProps = {
 const Layout = ({ children }: ChildrenProps) => {
   return (
     <>
-      <Header />
+      <HeaderSigned />
       {children}
       <Footer />
     </>
