@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import TrainerElement from "./trainer";
+import TrainerElement from "./Trainer";
 import useReveal from "@/lib/hooks/useReveal";
 
 const Trainers = () => {
