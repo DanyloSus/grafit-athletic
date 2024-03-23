@@ -27,6 +27,7 @@ const Main = () => {
           text="Почати"
           isWhite
           type="solid"
+          link="/register"
           icon={
             <Image
               src="./icons/04.svg"

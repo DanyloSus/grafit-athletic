@@ -15,7 +15,7 @@ const CustomTextField = (props: CustomTextFieldProps) => {
   return (
     <div className="flex relative flex-col w-full">
       <p
-        className="px-6"
+        className="px-6 translate-y-1/2"
         style={{
           color: props.error ? "#FFD1D1" : "",
         }}
@@ -27,7 +27,7 @@ const CustomTextField = (props: CustomTextFieldProps) => {
         disabled={props.disabled}
         value={props.value}
         name={props.name}
-        className="px-6 py-8 border border-grey bg-black rounded-lg"
+        className="px-6 py-4 border border-grey bg-black rounded-lg"
         style={{
           backgroundColor: props.error ? "#2E1C1C" : "",
           color: props.error ? "#FFD1D1" : "white",
@@ -35,7 +35,7 @@ const CustomTextField = (props: CustomTextFieldProps) => {
         onChange={(e) => props.onChange(e)}
       />
       {props.error ? (
-        <p className="text-errorText">{props.helperText}</p>
+        <p className="text-errorText px-6">{props.helperText}</p>
       ) : null}
     </div>
   );

@@ -71,12 +71,19 @@ const RegisterPage = () => {
           onChange={onChange}
         />
         <div className="flex gap-2 items-center mt-2">
-          <Button text="Зареєструватися" type="text" isWhite link="register" />
+          <Button
+            text="Зареєструватися"
+            type="text"
+            isWhite
+            link="register"
+            isSmall
+          />
           <Button
             text="Увійти"
             type="solid"
             isWhite
             link="signed/trainers"
+            isSmall
             icon={
               <Image
                 src="./icons/04.svg"

@@ -7,8 +7,11 @@ import Image from "next/image";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import CustomTextField from "@/components/ui/CustomTextField";
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
+  const router = useRouter();
+
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -27,7 +30,7 @@ const RegisterPage = () => {
           "Must be from 2 to 12 characters",
           (val) => val.length >= 2 && val.length <= 12
         ),
-      passwrord: Yup.string()
+      password: Yup.string()
         .required()
         .test(
           "latin",
@@ -40,7 +43,39 @@ const RegisterPage = () => {
           (val) => val.length >= 8 && val.length <= 20
         ),
     }),
-    onSubmit: () => {},
+    onSubmit: (value) => {
+      const users = localStorage.getItem("users");
+
+      if (users !== null) {
+        const usersList: {
+          username: string;
+          password: string;
+        }[] = JSON.parse(users);
+
+        if (usersList.find((e) => value.username === e.username)) {
+          console.log("exists");
+          formik.setErrors({ username: "User already exists" });
+        } else {
+          usersList.push({
+            username: value.username,
+            password: value.password,
+          });
+          localStorage.setItem("users", JSON.stringify(usersList));
+          router.replace("/signed/trainers");
+        }
+      } else {
+        localStorage.setItem(
+          "users",
+          JSON.stringify([
+            {
+              username: value.username,
+              password: value.password,
+            },
+          ])
+        );
+        router.replace("/signed/trainers");
+      }
+    },
   });
 
   function onChange(e: any) {
@@ -71,12 +106,13 @@ const RegisterPage = () => {
           onChange={onChange}
         />
         <div className="flex gap-2 items-center mt-2">
-          <Button text="Увійти" type="text" isWhite link="login" />
+          <Button text="Увійти" type="text" isWhite link="login" isSmall />
           <Button
             text="Зареєструватися"
             type="solid"
             isWhite
-            link="signed/trainers"
+            isSmall
+            isSubmit
             icon={
               <Image
                 src="./icons/04.svg"

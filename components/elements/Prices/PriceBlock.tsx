@@ -24,6 +24,7 @@ const PriceBlock = (props: PriceBlockProps) => {
         text="Купити"
         type={props.isHot ? "solid" : "outline"}
         isWhite={props.isHot ? true : false}
+        link="/register"
         icon={
           <Image
             src="./icons/04.svg"

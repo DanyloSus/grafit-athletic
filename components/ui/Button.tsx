@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation";
 import React, { ReactNode } from "react";
 
 type ButtonProps = {
@@ -12,35 +14,40 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
+  const router = useRouter();
+
   return (
-    <Link href={props.link ? props.link : "/register"}>
-      <button
-        className="flex items-center gap-5 font-bold"
-        type={props.isSubmit ? "submit" : "button"}
+    <button
+      className="flex items-center gap-5 font-bold"
+      type={props.isSubmit ? "submit" : "button"}
+      style={{
+        background: props.type === "solid" ? "hsla(80,59%,39%,100%)" : "",
+        border:
+          props.type === "outline" ? "8px solid hsla(80,59%,39%,100%)" : "",
+        padding: props.isSmall ? "7.5px 15px" : "10px 20px",
+        fontSize: props.isSmall ? "25px" : "33px",
+      }}
+      onClick={() => {
+        if (props.link) {
+          router.replace(props.link);
+        }
+      }}
+    >
+      <p
         style={{
-          background: props.type === "solid" ? "hsla(80,59%,39%,100%)" : "",
-          border:
-            props.type === "outline" ? "8px solid hsla(80,59%,39%,100%)" : "",
-          padding: props.isSmall ? "7.5px 15px" : "10px 20px",
-          fontSize: props.isSmall ? "25px" : "33px",
+          color: props.isWhite ? "white" : "hsla(48,10%,10%,100%)",
         }}
       >
-        <p
-          style={{
-            color: props.isWhite ? "white" : "hsla(48,10%,10%,100%)",
-          }}
-        >
-          {props.text}
-        </p>
-        <div
-          style={{
-            filter: `invert(${props.isWhite ? 0 : 100}%)`,
-          }}
-        >
-          {props.icon ? props.icon : null}
-        </div>
-      </button>
-    </Link>
+        {props.text}
+      </p>
+      <div
+        style={{
+          filter: `invert(${props.isWhite ? 0 : 100}%)`,
+        }}
+      >
+        {props.icon ? props.icon : null}
+      </div>
+    </button>
   );
 };
 

@@ -36,6 +36,8 @@ const TrainerElement = (props: TrainerElementProps) => {
         text="Записатися"
         type="outline"
         isWhite
+        isSmall
+        link="/signed/contactUs"
         icon={
           <Image src="/icons/04.svg" alt="arrow right" width={32} height={24} />
         }

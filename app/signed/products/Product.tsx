@@ -26,6 +26,7 @@ const ProductElement = (props: ProductElementProps) => {
         <Button
           text="Замовити"
           type="outline"
+          link="/signed/contactUs"
           icon={
             <Image
               src="/icons/04.svg"
