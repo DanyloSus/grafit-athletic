@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   @apply bg-black overflow-x-hidden;
 }
@@ -26,7 +30,8 @@ h2 {
   @apply text-[5rem];
 }
 
-p {
+p,
+a {
   @apply text-white;
 }
 

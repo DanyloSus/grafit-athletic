@@ -4,7 +4,10 @@ import React from "react";
 const AboutUs = () => {
   return (
     <>
-      <div className="sticky left-0 top-0 w-[50vw] h-lvh bg-black z-1">
+      <div
+        className="sticky left-0 top-0 w-[50vw] h-lvh bg-black z-1"
+        id="about-us"
+      >
         <Image
           src="/images/aboutUs.jpg"
           alt="man and woman in a gym"

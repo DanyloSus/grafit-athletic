@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 
 const Main = () => {
   return (
-    <section className="flex items-center">
+    <section className="flex items-center" id="main">
       <Image
         src="/images/BG_Main.jpg"
         alt="black and white background image of dumbbell"

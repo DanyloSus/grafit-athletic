@@ -14,7 +14,10 @@ const Prices = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center bg-black relative z-[3] gap-9">
+    <section
+      className="flex flex-col items-center justify-center bg-black relative z-[3] gap-9"
+      id="prices"
+    >
       <h2>Ціни</h2>
       <div className="flex items-center justify-center w-full">
         <PriceBlock title="1 місяць" price={900} />

@@ -15,7 +15,7 @@ const SignedLink = (props: SignedLinkProps) => {
 
   return (
     <p
-      className="border-b-green"
+      className="border-b-green cursor-pointer"
       style={{
         borderBottom: pathname === props.link ? "1px solid" : "",
       }}
