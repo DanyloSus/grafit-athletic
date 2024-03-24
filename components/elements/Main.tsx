@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <section className="flex items-center" id="main">
       <Image
-        src="/images/BG_Main.jpg"
+        src="/BG_Main.jpg"
         alt="black and white background image of dumbbell"
         width={1816}
         height={1024}

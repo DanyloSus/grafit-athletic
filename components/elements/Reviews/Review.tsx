@@ -12,7 +12,7 @@ const Review = (props: ReviewProps) => {
   return (
     <div className="w-[360px] h-[360px] rounded-xl bg-white border border-grey overflow-hidden">
       <Image
-        src={`/images/${props.image}.jpg`}
+        src={`/${props.image}.jpg`}
         alt={props.name}
         width={360}
         height={180}

@@ -51,7 +51,7 @@ const Page = () => {
       </div>
       <div className="fixed right-0 top-0 translate-x-1/2 left-[210px]">
         <Image
-          src="/images/contact.png"
+          src="/contact.png"
           width={1511}
           height={1024}
           alt="Contact bg"

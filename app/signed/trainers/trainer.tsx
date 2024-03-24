@@ -14,14 +14,14 @@ const TrainerElement = (props: TrainerElementProps) => {
     <div className="flex flex-col items-center reveal">
       <div className="relative flex items-center justify-center">
         <Image
-          src={`/images/${props.bg}.jpg`}
+          src={`/${props.bg}.jpg`}
           alt={`Задній фон ${props.name}`}
           width={223}
           height={223}
           className="w-[223px] h-[223px] rounded-full object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
         />
         <Image
-          src={`/images/${props.bg}.png`}
+          src={`/${props.bg}.png`}
           alt={props.name}
           width={223}
           height={349.2}

@@ -32,7 +32,7 @@ const Service = (props: ServiceProps) => {
   return (
     <div className="flex flex-col gap-[31px] items-center">
       <Image
-        src={`/images/${servicesList[props.page].image}`}
+        src={`/${servicesList[props.page].image}`}
         alt={servicesList[props.page].title}
         width={432}
         height={282}

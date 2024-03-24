@@ -13,7 +13,7 @@ const ProductElement = (props: ProductElementProps) => {
   return (
     <div className="bg-white border border-grey flex flex-col items-center">
       <Image
-        src={`/images/products/${props.image}.png`}
+        src={`/${props.image}.png`}
         alt={props.name}
         width={380}
         height={187}

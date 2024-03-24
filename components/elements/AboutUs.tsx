@@ -9,7 +9,7 @@ const AboutUs = () => {
         id="about-us"
       >
         <Image
-          src="/images/aboutUs.jpg"
+          src="/aboutUs.jpg"
           alt="man and woman in a gym"
           width={708}
           height={1024}
