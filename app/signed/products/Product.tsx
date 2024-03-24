@@ -28,12 +28,7 @@ const ProductElement = (props: ProductElementProps) => {
           type="outline"
           link="/signed/contactUs"
           icon={
-            <Image
-              src="/icons/04.svg"
-              alt="arrow right"
-              width={32}
-              height={24}
-            />
+            <Image src="/04.svg" alt="arrow right" width={32} height={24} />
           }
           isSmall
         />

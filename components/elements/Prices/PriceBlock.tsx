@@ -25,14 +25,7 @@ const PriceBlock = (props: PriceBlockProps) => {
         type={props.isHot ? "solid" : "outline"}
         isWhite={props.isHot ? true : false}
         link="/register"
-        icon={
-          <Image
-            src="./icons/04.svg"
-            alt="arrow right"
-            width={32}
-            height={24}
-          />
-        }
+        icon={<Image src="./04.svg" alt="arrow right" width={32} height={24} />}
       />
     </div>
   );

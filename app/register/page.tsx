@@ -115,7 +115,7 @@ const RegisterPage = () => {
             isSubmit
             icon={
               <Image
-                src="./icons/04.svg"
+                src="./04.svg"
                 alt="arrow right"
                 width={32}
                 height={24}

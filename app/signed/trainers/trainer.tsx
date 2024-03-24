@@ -38,9 +38,7 @@ const TrainerElement = (props: TrainerElementProps) => {
         isWhite
         isSmall
         link="/signed/contactUs"
-        icon={
-          <Image src="/icons/04.svg" alt="arrow right" width={32} height={24} />
-        }
+        icon={<Image src="/04.svg" alt="arrow right" width={32} height={24} />}
       />
     </div>
   );

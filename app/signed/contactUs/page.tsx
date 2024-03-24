@@ -8,7 +8,7 @@ const Page = () => {
         <h2 className="leading-[60px]">Зв’язатися з нами</h2>
         <div className="flex gap-[0.9375rem] items-center justify-start">
           <Image
-            src="/icons/location_on.svg"
+            src="/location_on.svg"
             alt="location image"
             width={24}
             height={24}
@@ -17,7 +17,7 @@ const Page = () => {
         </div>
         <div className="flex gap-[0.9375rem] items-center justify-start">
           <Image
-            src="/icons/location_on.svg"
+            src="/location_on.svg"
             alt="location image"
             width={24}
             height={24}
@@ -26,7 +26,7 @@ const Page = () => {
         </div>
         <div className="flex gap-[0.9375rem] items-center justify-start">
           <Image
-            src="/icons/location_on.svg"
+            src="/location_on.svg"
             alt="location image"
             width={24}
             height={24}
@@ -34,21 +34,11 @@ const Page = () => {
           <p>Михайлівська вулиця, 44в</p>
         </div>
         <div className="flex gap-[0.9375rem] items-center">
-          <Image
-            src="/icons/mail.svg"
-            alt="mail image"
-            width={24}
-            height={24}
-          />
+          <Image src="/mail.svg" alt="mail image" width={24} height={24} />
           <p>grafit@athletic.ua</p>
         </div>
         <div className="flex gap-[0.9375rem] items-center">
-          <Image
-            src="/icons/call.svg"
-            alt="call image"
-            width={24}
-            height={24}
-          />
+          <Image src="/call.svg" alt="call image" width={24} height={24} />
           <p>+38-555-058-47-93</p>
         </div>
         <iframe

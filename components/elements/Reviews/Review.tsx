@@ -25,11 +25,11 @@ const Review = (props: ReviewProps) => {
         <h3 className="text-black text-[30px]">{props.name}</h3>
         <p className="text-black text-center">{props.text}</p>
         <div className="flex">
-          <Image src="/icons/Star.svg" width={33} height={33} alt="star" />
-          <Image src="/icons/Star.svg" width={33} height={33} alt="star" />
-          <Image src="/icons/Star.svg" width={33} height={33} alt="star" />
-          <Image src="/icons/Star.svg" width={33} height={33} alt="star" />
-          <Image src="/icons/Star.svg" width={33} height={33} alt="star" />
+          <Image src="/Star.svg" width={33} height={33} alt="star" />
+          <Image src="/Star.svg" width={33} height={33} alt="star" />
+          <Image src="/Star.svg" width={33} height={33} alt="star" />
+          <Image src="/Star.svg" width={33} height={33} alt="star" />
+          <Image src="/Star.svg" width={33} height={33} alt="star" />
         </div>
       </div>
     </div>
