@@ -32,11 +32,11 @@ h2 {
 
 p,
 a {
-  @apply text-white max-lg:text-[24px] max-lg:font-bold max-lg:leading-[40px] max-lg:tracking-wide max-sm:text-[14px] max-sm:font-medium max-sm:leading-[17px];
+  @apply text-white max-lg:text-[24px] max-lg:leading-[40px] tracking-wide max-sm:text-[14px] max-sm:leading-[17px];
 }
 
 a {
-  @apply border-b-transparent hover:border-green border-b transition-all hover:scale-105;
+  @apply border-b-transparent hover:border-green border-b transition-all hover:scale-105 max-lg:font-bold max-sm:font-normal;
 }
 
 p,
@@ -45,7 +45,7 @@ button {
 }
 
 section {
-  @apply border-b-[1px] border-b-grey min-h-lvh w-lvw lg:px-pcx sm:px-tx px-mx py-[60px];
+  @apply border-b-[1px] border-b-grey lg:min-h-lvh w-lvw lg:px-pcx sm:px-tx px-mx py-[60px];
 }
 
 @for $i from 1 through 4 {
