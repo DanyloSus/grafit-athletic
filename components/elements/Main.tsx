@@ -4,7 +4,7 @@ import StartButton from "../ui/StartButton";
 
 const Main = () => {
   return (
-    <section className="flex items-center" id="main">
+    <section className="flex items-center min-h-lvh" id="main">
       <Image
         src="/BG_Main.jpg"
         alt="black and white background image of dumbbell"
