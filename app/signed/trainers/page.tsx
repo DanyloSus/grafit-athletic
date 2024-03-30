@@ -9,9 +9,10 @@ const Trainers = () => {
 
   useEffect(() => {
     reveal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <section className="flex flex-col items-center py-20">
+    <section className="flex flex-col items-center py-36 sm:py-20">
       <h2>Тренери</h2>
       <div className="flex items-center max-lg:flex-col max-lg:gap-5 reveal">
         <TrainerElement
