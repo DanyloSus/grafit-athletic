@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <>
       <div
-        className="sticky left-0 top-0 w-lvw lg:w-[50vw] h-[281px] lg:h-lvh bg-black z-[2] lg:z-[1] lg:border-b border-b-grey"
+        className="sticky left-0 top-[50px] lg:top-0 w-lvw lg:w-[50vw] h-[133px] sm:h-[281px] lg:h-lvh bg-black z-[2] lg:z-[1] lg:border-b border-b-grey"
         id="about-us"
       >
         <Image
@@ -13,16 +13,16 @@ const AboutUs = () => {
           alt="man and woman in a gym"
           width={708}
           height={1024}
-          className=" opacity-50  object-cover w-lvw lg:w-full h-[281px] lg:h-lvh max-lg:object-top"
+          className=" opacity-50  object-cover w-lvw lg:w-full  h-[133px] sm:h-[281px] lg:h-lvh max-lg:object-top"
         />
-        <h2 className="absolute top-0 flex items-center justify-center w-lvw lg:w-full h-[281px] lg:h-lvh  left-0 ">
+        <h2 className="absolute top-0 flex items-center justify-center w-lvw lg:w-full h-[133px] sm:h-[281px] lg:h-lvh left-0">
           Про нас
         </h2>
       </div>
       <div className="absolute top-[200vh] right-0 w-lvw border-b-2 border-b-grey z-50 h-1 hidden lg:block" />
-      <section className="lg:absolute lg:-translate-y-full bg-black max-lg:h-[509px]">
-        <div className="lg:w-[50vw] h-[509px] lg:h-lvh lg:absolute right-0 top-0  flex lg:items-center lg:pr-pcx lg:pl-[22px] max-lg:text-center">
-          <p className="text-2xl">
+      <section className="lg:absolute lg:-translate-y-full bg-black max-sm:min-h-[405px] max-lg:min-h-[509px]">
+        <div className="lg:w-[50vw] h-auto lg:h-lvh lg:absolute right-0 top-0  flex lg:items-center lg:pr-pcx lg:pl-[22px] max-lg:text-center max-sm:max-w-[281px] max-sm:mx-auto">
+          <p className="sm:text-2xl">
             Наш фітнес-центр Grafit Athletic - це не лише місце для занять
             спортом, але й цілий світ фізичного здоров&apos;я та емоційного
             благополуччя. У нашому <b>застосунку</b> ви знайдете{" "}

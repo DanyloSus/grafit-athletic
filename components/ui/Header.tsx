@@ -25,7 +25,7 @@ const Header = () => {
           </p>
         </div>
       </Link>
-      <nav className=" sm:gap-[24px] lg:gap-[18px] max-lg:text-[24px] hidden md:flex">
+      <nav className=" sm:gap-[22px] lg:gap-[18px] max-lg:text-[24px] hidden md:flex">
         <Link href="#about-us">Про нас</Link>
         <Link href="#services">Послуги</Link>
         <Link href="#reviews">Відгуки</Link>
