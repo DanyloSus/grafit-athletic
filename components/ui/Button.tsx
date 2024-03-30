@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import React, { ReactNode } from "react";
+import "./button.scss";
 
 type ButtonProps = {
   text: string;
@@ -18,13 +19,14 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button
-      className="flex items-center gap-5 font-bold"
+      className="flex items-center gap-5 font-bold transition-all hover:scale-110 hover:bg-green"
       type={props.isSubmit ? "submit" : "button"}
       style={{
         background: props.type === "solid" ? "hsla(80,59%,39%,100%)" : "",
-        border:
+        outline:
           props.type === "outline" ? "8px solid hsla(80,59%,39%,100%)" : "",
-        padding: props.isSmall ? "7.5px 15px" : "18px 20px",
+        outlineOffset: "-8px",
+        padding: props.isSmall ? "7.5px 15px" : "7px 15px",
         fontSize: props.isSmall ? "25.12px" : "33.49px",
       }}
       onClick={() => {

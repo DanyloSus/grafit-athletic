@@ -1,0 +1,10 @@
+button {
+  &:hover {
+    p {
+      color: white !important;
+    }
+    div {
+      filter: invert(0) !important;
+    }
+  }
+}

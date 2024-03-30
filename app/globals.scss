@@ -49,24 +49,24 @@ section {
 }
 
 @for $i from 1 through 4 {
-  .reveal:nth-child(#{$i}) {
+  .reveal > div:nth-child(#{$i}) {
     transition: 1s all ease-in-out #{calc($i/2)}s;
   }
 }
 
-.reveal:nth-child(2n + 1) {
+.reveal > div:nth-child(2n + 1) {
   transform: translateY(150px);
 
   opacity: 0;
 }
 
-.reveal:nth-child(2n) {
+.reveal > div:nth-child(2n) {
   transform: translateY(-150px);
 
   opacity: 0;
 }
 
-.reveal.active {
+.reveal.active > div {
   transform: translateY(0);
 
   opacity: 1;
