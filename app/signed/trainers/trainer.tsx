@@ -11,15 +11,14 @@ type TrainerElementProps = {
 
 const TrainerElement = (props: TrainerElementProps) => {
   return (
-    <div className="flex flex-col items-center max-sm:gap-[15px]">
+    <div className="flex flex-col items-center max-lg:gap-[15px]">
       <div className="relative flex items-center justify-center overflow-visible max-sm:max-w-[207.12px] max-lg:w-[397.51px]">
         <Image
           src={`/${props.bg}.jpg`}
           alt={`Задній фон ${props.name}`}
           width={223}
           height={223}
-          className="max-w-[207.12px] max-h-[207.12px] sm:w-[397.51px] sm:h-[397.51px] lg:w-[223px] lg:h-[223px] rounded-full object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover "
-          style={{ width: "397.51px" }}
+          className="max-sm:max-w-[207.12px] max-sm:max-h-[207.12px] sm:w-[397.51px] sm:h-[397.51px] lg:w-[223px] lg:h-[223px] rounded-full object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover "
         />
         <Image
           src={`/${props.bg}.png`}

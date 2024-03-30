@@ -15,9 +15,10 @@ const SignedLink = (props: SignedLinkProps) => {
 
   return (
     <p
-      className="border-b-green cursor-pointer"
+      className=" max-lg:text-[22px] cursor-pointer"
       style={{
-        borderBottom: pathname === props.link ? "1px solid" : "",
+        borderBottom:
+          pathname === props.link ? "3px solid hsla(80,59%,39%,100%)" : "",
       }}
       onClick={() => {
         router.replace(props.link);
