@@ -23,7 +23,7 @@ export default function PriceSlider() {
     ),
   };
   return (
-    <div className="slider-container px-10">
+    <div className="slider-container px-10 sm:hidden block">
       <Slider {...settings}>
         <PriceBlock title="1 місяць" price={900} />
         <PriceBlock isHot title="3 місяці" price={2400} />
