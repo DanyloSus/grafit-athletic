@@ -27,7 +27,7 @@ const Reviews = () => {
       id="reviews"
     >
       <h2>Відгуки</h2>
-      <div className="flex justify-between w-full">
+      <div className="flex gap-[34.12px] sm:gap-[30px] lg:gap-2 flex-wrap justify-between w-full">
         {reviews.map((e, index) => (
           <Review
             image={e.image}
