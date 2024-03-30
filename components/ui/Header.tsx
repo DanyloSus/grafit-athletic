@@ -17,7 +17,7 @@ const Header = () => {
           className="w-[54.44px] h-[54.44px] sm:w-[57.16px] sm:h-[57.16px] lg:w-[72px] lg:h-[72px]"
         />
         <div>
-          <h3 className="text-[30.99px] sm:text-[32.54px] lg:text-[41px] uppercase">
+          <h3 className="text-[30.99px] sm:text-[32.54px] lg:text-[41px] uppercase max-sm:mb-1">
             GRAFIT
           </h3>
           <p className="uppercase tracking-[14.44px] sm:tracking-[15.2px] lg:tracking-[19px] max-lg:text-[12.7px] max-sm:text-[12.1px] text-base">
