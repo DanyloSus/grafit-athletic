@@ -12,18 +12,18 @@ const Main = () => {
         height={1024}
         className="h-lvh w-[1816px] object-cover fixed top-0 left-0 -z-[1]"
       />
-      <div className="flex flex-col lg:items-start items-center gap-[58px] lg:max-w-[712px] w-full relative z-[1] ">
+      <div className="flex flex-col lg:items-start items-center sm:gap-[58px] gap-[23px] lg:max-w-[712px] w-full relative z-[1] ">
         <h1 className="text-[102.46px] leading-[100px] hidden lg:block">
           Ви з<br />
           Grafit
           <br />
           Athletic!
         </h1>
-        <h1 className="text-[80px] leading-[100px] lg:hidden block text-center">
+        <h1 className="sm:text-[80px] text-5xl leading-[64px] sm:leading-[100px] lg:hidden block text-center">
           Ви з<br />
           Grafit Athletic!
         </h1>
-        <p className="lg:text-[21.74px] text-[32px] w-[712px] lg:w-auto max-lg:text-center max-lg:font-bold max-lg:leading-[40px] tracking-wide">
+        <p className="lg:text-[21.74px] sm:text-[32px] text-[14px] max-w-[345px] sm:max-w-[712px] lg:max-w-none max-lg:text-center max-lg:font-bold max-sm:font-medium max-sm:leading-[17px] max-lg:leading-[40px] tracking-wide">
           Відкрийте нові горизонти з нашим фітнес-центром. Приєднуйтесь сьогодні
           та досягайте більше!
         </p>

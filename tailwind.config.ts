@@ -25,6 +25,8 @@ const config: Config = {
         pcy: "10px",
         tx: "58px",
         ty: "10px",
+        mx: "12px",
+        mt: "5px",
       },
     },
   },
