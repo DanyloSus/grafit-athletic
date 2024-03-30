@@ -12,7 +12,7 @@ const Main = () => {
         height={1024}
         className="h-lvh w-[1816px] object-cover fixed top-0 left-0 -z-[1]"
       />
-      <div className="flex flex-col lg:items-start items-center sm:gap-[58px] gap-[23px] lg:max-w-[712px] w-full relative z-[1] ">
+      <div className="flex flex-col lg:items-start items-center sm:gap-[58px] gap-[23px] lg:max-w-[712px] w-full relative z-[1]">
         <h1 className="text-[102.46px] leading-[100px] hidden lg:block">
           Ви з<br />
           Grafit

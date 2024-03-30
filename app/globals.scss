@@ -41,7 +41,7 @@ button {
 }
 
 section {
-  @apply border-b-[1px] border-b-grey min-h-lvh w-lvw lg:px-pcx sm:px-tx px-mx;
+  @apply border-b-[1px] border-b-grey min-h-lvh w-lvw lg:px-pcx sm:px-tx px-mx py-[60px];
 }
 
 @for $i from 1 through 4 {
