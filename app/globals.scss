@@ -35,6 +35,14 @@ a {
   @apply text-white;
 }
 
+.rules {
+  @apply max-lg:text-[32px] max-lg:font-bold max-lg:leading-[40px] max-lg:tracking-wide;
+}
+
+a {
+  @apply border-b-transparent hover:border-green border-b transition-all hover:scale-105;
+}
+
 p,
 button {
   @apply font-roboto;

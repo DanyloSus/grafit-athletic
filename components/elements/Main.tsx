@@ -23,7 +23,7 @@ const Main = () => {
           Ви з<br />
           Grafit Athletic!
         </h1>
-        <p className="lg:text-[21.74px] sm:text-[32px] text-[14px] max-w-[345px] sm:max-w-[712px] lg:max-w-none max-lg:text-center max-lg:font-bold max-sm:font-medium max-sm:leading-[17px] max-lg:leading-[40px] tracking-wide">
+        <p className="lg:text-[21.74px] sm:text-[32px] text-[14px] max-w-[345px] sm:max-w-[712px] lg:max-w-none max-lg:text-center max-lg:font-bold max-sm:font-medium max-sm:leading-[17px] max-lg:leading-[40px] max-lg:tracking-wide">
           Відкрийте нові горизонти з нашим фітнес-центром. Приєднуйтесь сьогодні
           та досягайте більше!
         </p>

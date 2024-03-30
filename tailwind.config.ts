@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+import colors from "tailwindcss/colors";
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +10,7 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      ...colors,
       black: "hsla(48,10%,10%,100%)",
       green: "hsla(80,59%,39%,100%)",
       white: "hsla(0,0%,100%,100%)",
