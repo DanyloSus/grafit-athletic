@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Button from "../ui/Button";
 import StartButton from "../ui/StartButton";
 
 const Main = () => {
@@ -11,16 +10,20 @@ const Main = () => {
         alt="black and white background image of dumbbell"
         width={1816}
         height={1024}
-        className="h-[1024px] w-[1816px] object-cover fixed top-0 left-0 -z-[1]"
+        className="h-lvh w-[1816px] object-cover fixed top-0 left-0 -z-[1]"
       />
-      <div className="flex flex-col items-start gap-[58px] max-w-[712px] relative z-[1]">
-        <h1 className="text-[102.46px] leading-[100px]">
+      <div className="flex flex-col lg:items-start items-center gap-[58px] lg:max-w-[712px] w-full relative z-[1] ">
+        <h1 className="text-[102.46px] leading-[100px] hidden lg:block">
           Ви з<br />
           Grafit
           <br />
           Athletic!
         </h1>
-        <p className="text-[21.74px]">
+        <h1 className="text-[80px] leading-[100px] lg:hidden block text-center">
+          Ви з<br />
+          Grafit Athletic!
+        </h1>
+        <p className="lg:text-[21.74px] text-[32px] w-[712px] lg:w-auto max-lg:text-center max-lg:font-bold max-lg:leading-[40px] tracking-wide">
           Відкрийте нові горизонти з нашим фітнес-центром. Приєднуйтесь сьогодні
           та досягайте більше!
         </p>

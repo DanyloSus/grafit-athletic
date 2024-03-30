@@ -10,7 +10,7 @@ const StartButton = () => {
 
   return (
     <button
-      className="flex items-center justify-center gap-5 font-bold bg-green text-white w-[284px] h-16 text-[33.49px] startButton"
+      className="flex items-center justify-center gap-5 font-bold bg-green text-white w-[440px] lg:w-[284px] h-16 text-[33.49px] startButton transition-transform"
       onClick={() => {
         router.replace("/register/");
       }}

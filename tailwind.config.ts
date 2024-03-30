@@ -21,8 +21,10 @@ const config: Config = {
     },
     extend: {
       spacing: {
-        pcx: "8.125rem",
-        pcy: "0.625rem",
+        pcx: "130px",
+        pcy: "10px",
+        tx: "58px",
+        ty: "10px",
       },
     },
   },
