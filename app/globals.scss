@@ -54,22 +54,44 @@ section {
   }
 }
 
-.reveal > div:nth-child(2n + 1) {
-  transform: translateY(150px);
+@media screen and (min-width: 1024px) {
+  .reveal > div:nth-child(2n + 1) {
+    transform: translateY(150px);
 
-  opacity: 0;
+    opacity: 0;
+  }
+
+  .reveal > div:nth-child(2n) {
+    transform: translateY(-150px);
+
+    opacity: 0;
+  }
+
+  .reveal.active > div {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
 }
 
-.reveal > div:nth-child(2n) {
-  transform: translateY(-150px);
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .reveal > div:nth-child(2n + 1) {
+    transform: translateX(150px);
 
-  opacity: 0;
-}
+    opacity: 0;
+  }
 
-.reveal.active > div {
-  transform: translateY(0);
+  .reveal > div:nth-child(2n) {
+    transform: translateX(-150px);
 
-  opacity: 1;
+    opacity: 0;
+  }
+
+  .reveal.active > div {
+    transform: translateX(0);
+
+    opacity: 1;
+  }
 }
 
 .text {

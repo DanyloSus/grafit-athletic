@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
 
-import plugin from "tailwindcss/plugin";
-
 import colors from "tailwindcss/colors";
 
 const config: Config = {
@@ -35,14 +33,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    plugin(function ({ addComponents }) {
-      addComponents({
-        "text-white": {
-          color: "hsla(0,0%,100%,100%) !important",
-        },
-      });
-    }),
-  ],
+  plugins: [],
 };
 export default config;

@@ -11,11 +11,12 @@ type PriceBlockProps = {
 const PriceBlock = (props: PriceBlockProps) => {
   return (
     <div
-      className=" bg-white rounded-lg flex flex-col px-[18px] py-11 gap-[39px] items-center justify-center w-full relative border border-grey"
+      className=" bg-white rounded-lg flex flex-col px-[18px] py-11 gap-[39px] items-center justify-center sm:max-w-[254px] lg:max-w-[359px] relative border border-grey"
       style={{
         boxShadow: props.isHot ? "0px 0px 10px 10px rgba(0,0,0,0.3)" : "",
         zIndex: props.isHot ? "4" : "",
         width: props.isHot ? "359px" : "100%",
+        maxWidth: props.isHot ? "359px" : "273px",
       }}
     >
       {props.isHot ? <h3 className="text-5xl text-green">Популярне</h3> : null}

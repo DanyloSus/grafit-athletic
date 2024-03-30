@@ -23,7 +23,7 @@ const reviews = [
 const Reviews = () => {
   return (
     <section
-      className="bg-black relative z-10 flex flex-col gap-5 items-center justify-center"
+      className="bg-black relative z-10 lg:z-[3] flex flex-col gap-5 items-center justify-center lg:sticky top-0"
       id="reviews"
     >
       <h2>Відгуки</h2>

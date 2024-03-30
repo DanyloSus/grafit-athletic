@@ -19,7 +19,7 @@ const Prices = () => {
       id="prices"
     >
       <h2>Ціни</h2>
-      <div className="flex items-center justify-center w-full reveal">
+      <div className="flex max-lg:flex-col flex-wrap items-center justify-center w-full reveal">
         <PriceBlock title="1 місяць" price={900} />
         <PriceBlock isHot title="3 місяці" price={2400} />
         <PriceBlock title="6 місяці" price={4500} />
