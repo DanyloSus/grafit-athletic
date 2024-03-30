@@ -16,7 +16,7 @@ const Services = () => {
       className="bg-black relative z-[3] flex items-center justify-center"
       id="services"
     >
-      <h2 className="absolute top-[75px] left-1/2 -translate-x-1/2">Послуги</h2>
+      <h2 className="absolute top-[50px] left-1/2 -translate-x-1/2">Послуги</h2>
       <Service page={page} />
       <NavBar page={page} setNewPage={setNewPage} />
     </section>

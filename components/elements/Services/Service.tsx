@@ -36,9 +36,12 @@ const Service = (props: ServiceProps) => {
         alt={servicesList[props.page].title}
         width={432}
         height={282}
+        className="rounded-lg"
       />
       <h3 className="text-5xl">{servicesList[props.page].title}</h3>
-      <p className="w-[584px] text-center">{servicesList[props.page].text}</p>
+      <p className="w-[584px] text-center lg:text-xl">
+        {servicesList[props.page].text}
+      </p>
     </div>
   );
 };
