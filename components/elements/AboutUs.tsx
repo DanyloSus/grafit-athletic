@@ -19,7 +19,7 @@ const AboutUs = () => {
           Про нас
         </h2>
       </div>
-      <div className="absolute top-[200vh] right-0 w-lvw border-b-2 border-b-grey z-50 h-1 hidden lg:block" />
+      <div className="absolute top-[200vh] right-0 w-lvw border-b-2 border-b-grey z-40 h-1 hidden lg:block" />
       <section className="lg:absolute lg:-translate-y-full bg-black max-sm:min-h-[405px] max-lg:min-h-[509px]">
         <div className="lg:w-[50vw] h-auto lg:h-lvh lg:absolute right-0 top-0  flex lg:items-center lg:pr-pcx lg:pl-[22px] max-lg:text-center max-sm:max-w-[281px] max-sm:mx-auto">
           <p className="sm:text-2xl">

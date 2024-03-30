@@ -7,7 +7,7 @@ type NavBarProps = {
 
 const NavBar = (props: NavBarProps) => {
   return (
-    <div className="absolute bottom-[75px] left-1/2 -translate-x-1/2">
+    <div className="relative">
       <div
         className="w-[46px] h-[46px] rounded-full bg-green absolute top-1/2 -translate-y-1/2 transition-all"
         style={{

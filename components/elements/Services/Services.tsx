@@ -13,10 +13,10 @@ const Services = () => {
 
   return (
     <section
-      className="bg-black relative z-[3] flex items-center justify-center"
+      className="bg-black relative z-[3] flex flex-col gap-[50px] items-center max-lg:min-h-lvh py-[50px] justify-center"
       id="services"
     >
-      <h2 className="absolute top-[50px] left-1/2 -translate-x-1/2">Послуги</h2>
+      <h2>Послуги</h2>
       <Service page={page} />
       <NavBar page={page} setNewPage={setNewPage} />
     </section>
