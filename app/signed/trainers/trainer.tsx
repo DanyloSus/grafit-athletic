@@ -11,21 +11,21 @@ type TrainerElementProps = {
 
 const TrainerElement = (props: TrainerElementProps) => {
   return (
-    <div className="flex flex-col items-center reveal">
+    <div className="flex flex-col items-center">
       <div className="relative flex items-center justify-center">
         <Image
           src={`/${props.bg}.jpg`}
           alt={`Задній фон ${props.name}`}
           width={223}
           height={223}
-          className="w-[223px] h-[223px] rounded-full object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
+          className="w-[223px] h-[223px] rounded-full object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover "
         />
         <Image
           src={`/${props.bg}.png`}
           alt={props.name}
           width={223}
           height={349.2}
-          className="h-[349.2px] object-cover relative z-3"
+          className="h-[349.2px] object-cover relative z-3 overflow-visible"
         />
       </div>
       <div className="mt-10 mb-10 gap-3 flex flex-col items-center justify-center">

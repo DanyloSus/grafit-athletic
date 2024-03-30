@@ -13,7 +13,7 @@ const Trainers = () => {
   return (
     <section className="flex flex-col items-center py-20">
       <h2>Тренери</h2>
-      <div className="flex">
+      <div className="flex reveal">
         <TrainerElement
           bg="Floyd"
           img="Floyd"
