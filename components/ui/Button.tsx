@@ -35,13 +35,13 @@ const Button = (props: ButtonProps) => {
         }
       }}
     >
-      <p
+      <span
         style={{
           color: props.isWhite ? "white" : "hsla(48,10%,10%,100%)",
         }}
       >
         {props.text}
-      </p>
+      </span>
       <div
         style={{
           filter: `invert(${props.isWhite ? 0 : 100}%)`,
