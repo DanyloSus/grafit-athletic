@@ -30,18 +30,18 @@ const servicesList = [
 
 const Service = (props: ServiceProps) => {
   return (
-    <div className="flex flex-col gap-[31px] items-center">
+    <div className="flex flex-col gap-5 sm:gap-[31px] items-center">
       <Image
         src={`/${servicesList[props.page].image}`}
         alt={servicesList[props.page].title}
         width={432}
         height={282}
-        className="rounded-lg"
+        className="rounded-lg max-sm:w-full h-auto"
       />
-      <h3 className="sm:text-[52.62px] lg:text-5xl text-center">
+      <h3 className="text-3xl sm:text-[52.62px] lg:text-5xl text-center">
         {servicesList[props.page].title}
       </h3>
-      <p className="w-[584px] text-center sm:text-[20px] sm:leading-[24px]">
+      <p className="max-w-[584px] text-center sm:text-[20px] sm:leading-[24px]">
         {servicesList[props.page].text}
       </p>
     </div>
