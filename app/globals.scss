@@ -72,6 +72,14 @@ section {
 
     opacity: 1;
   }
+
+  .text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
 }
 
 @media screen and (min-width: 640px) and (max-width: 1024px) {
@@ -92,14 +100,14 @@ section {
 
     opacity: 1;
   }
-}
 
-.text {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  line-clamp: 5;
-  -webkit-box-orient: vertical;
+  .text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
 }
 
 .text-2l {
