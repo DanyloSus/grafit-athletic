@@ -1,0 +1,21 @@
+.startButton {
+  &:hover {
+    @apply scale-110 transition-transform;
+
+    & .arrow {
+      animation: arrowAnimation 0.6s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(11px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

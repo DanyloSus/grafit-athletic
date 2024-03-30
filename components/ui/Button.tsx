@@ -24,8 +24,8 @@ const Button = (props: ButtonProps) => {
         background: props.type === "solid" ? "hsla(80,59%,39%,100%)" : "",
         border:
           props.type === "outline" ? "8px solid hsla(80,59%,39%,100%)" : "",
-        padding: props.isSmall ? "7.5px 15px" : "10px 20px",
-        fontSize: props.isSmall ? "25px" : "33px",
+        padding: props.isSmall ? "7.5px 15px" : "18px 20px",
+        fontSize: props.isSmall ? "25.12px" : "33.49px",
       }}
       onClick={() => {
         if (props.link) {
