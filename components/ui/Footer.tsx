@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="border-t-[1px] border-t-grey w-lvw h-[335px] sm:h-[450px] lg:h-[406px] flex justify-between items-start sm:items-center px-[12px] max-sm:py-[58px] max-sm:flex-col sm:px-tx lg:px-pcx bg-black z-50 relative">
+    <footer className="border-t-[1px] border-t-grey w-lvw h-[335px] sm:h-[450px] lg:h-[406px] flex justify-between items-start sm:items-center px-[12px] max-sm:py-[58px] max-sm:flex-col sm:px-tx lg:px-pcx bg-black z-30 relative">
       <div className="flex flex-col gap-[15px] sm:gap-[47px] lg:gap-[35px]">
         <div className="flex gap-[0.9375rem] items-center">
           <Image src="/mail.svg" alt="mail image" width={24} height={24} />

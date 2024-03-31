@@ -14,7 +14,11 @@ const ClientPortal = ({ children }: ClientPortalInterface) => {
     setDomReady(true);
   }, []);
 
-  const menuRoot = document.getElementById("menu");
+  var menuRoot;
+
+  if (domReady) {
+    menuRoot = document.getElementById("menu");
+  }
 
   return domReady ? createPortal(children, menuRoot!) : null;
 };

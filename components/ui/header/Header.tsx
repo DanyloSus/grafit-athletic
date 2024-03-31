@@ -9,7 +9,7 @@ const Header = () => {
   console.log("header created");
 
   return (
-    <header className="py-my px-mx sm:py-ty sm:px-tx lg:py-pcy lg:px-pcx bg-black w-lvw flex items-center justify-between fixed top-0 left-0 shadow-sm z-50">
+    <header className="py-my px-mx sm:py-ty sm:px-tx lg:py-pcy lg:px-pcx bg-black w-lvw flex items-center justify-between fixed top-0 left-0 shadow-xl z-50">
       <Link
         href="#main"
         className="flex gap-[9.07px] sm:gap-[9.53px] lg:gap-3 items-center"

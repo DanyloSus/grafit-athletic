@@ -49,7 +49,7 @@ const MobileMenu = () => {
               type="solid"
               icon={
                 <Image
-                  src="./04.svg"
+                  src="/04.svg"
                   alt="arrow right"
                   width={32}
                   height={24}
@@ -61,11 +61,11 @@ const MobileMenu = () => {
               text={"Реєстрація"}
               isSmall
               isWhite
-              link="/login"
+              link="/register"
               type="outline"
               icon={
                 <Image
-                  src="./04.svg"
+                  src="/04.svg"
                   alt="arrow right"
                   width={32}
                   height={24}
