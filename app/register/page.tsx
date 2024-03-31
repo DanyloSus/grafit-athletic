@@ -91,7 +91,7 @@ const RegisterPage = () => {
         className="flex flex-col gap-5 w-full sm:max-w-[399px] items-center"
       >
         <CustomTextField
-          disabled={false}
+          disabled={isRegistering}
           error={Boolean(formik.errors.username)}
           helperText={formik.errors.username ? formik.errors.username : ""}
           label="Username"
@@ -101,7 +101,7 @@ const RegisterPage = () => {
           onChange={onChange}
         />
         <CustomTextField
-          disabled={false}
+          disabled={isRegistering}
           error={Boolean(formik.errors.password)}
           helperText={formik.errors.password ? formik.errors.password : ""}
           label="Password"
@@ -111,9 +111,17 @@ const RegisterPage = () => {
           onChange={onChange}
         />
         <div className="flex max-sm:flex-col-reverse gap-2 items-center mt-2">
-          <Button text="Увійти" type="text" isWhite link="login" isSmall />
+          <Button
+            text="Увійти"
+            type="text"
+            isWhite
+            link="login"
+            isSmall
+            disabled={isRegistering}
+          />
           <Button
             text="Зареєструватися"
+            disabled={isRegistering}
             type="solid"
             isWhite
             isSmall

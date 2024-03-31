@@ -10,6 +10,7 @@ type ButtonProps = {
   isSmall?: boolean;
   isWhite?: boolean;
   anotherWay?: boolean;
+  disabled?: boolean;
   icon?: ReactNode;
   link?: string;
   isSubmit?: boolean;
@@ -21,6 +22,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       className="flex items-center gap-5 font-bold transition-all hover:scale-110 hover:bg-green"
+      disabled={props.disabled}
       type={props.isSubmit ? "submit" : "button"}
       style={{
         background: props.type === "solid" ? "hsla(80,59%,39%,100%)" : "",

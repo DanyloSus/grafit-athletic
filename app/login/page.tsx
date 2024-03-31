@@ -2,14 +2,16 @@
 
 import Button from "@/components/ui/Button";
 import FormsWrapper from "@/components/wrappers/FormsWrapper";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import CustomTextField from "@/components/ui/CustomTextField";
 import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 
 const RegisterPage = () => {
+  const [isRegistering, setIsRegistering] = useState(false);
   const router = useRouter();
 
   const formik = useFormik({
@@ -44,30 +46,30 @@ const RegisterPage = () => {
         ),
     }),
     validateOnChange: false,
-    onSubmit: (value) => {
-      const users = localStorage.getItem("users");
+    onSubmit: async (value) => {
+      setIsRegistering(true);
+      const res = await signIn("credentials", {
+        username: value.username,
+        password: value.password,
+        redirect: false,
+      }).catch((err) => console.log(err));
 
-      if (users !== null) {
-        const usersList: {
-          username: string;
-          password: string;
-        }[] = JSON.parse(users);
-
-        if (
-          usersList.find((e) => value.username === e.username) &&
-          usersList.find((e) => value.username === e.username)?.password ==
-            value.password
-        ) {
-          router.replace("/signed/trainers");
-        } else {
-          formik.setErrors({
-            username: " ",
-            password: "User or password is correct",
-          });
-        }
-      } else {
-        formik.setErrors({ username: "User doesn't exist" });
+      if (res?.status !== 401 && !res?.ok) {
+        // if res has errors
+        setIsRegistering(false);
+        return;
       }
+
+      if (res?.status === 401) {
+        formik.setErrors({
+          username: " ",
+          password: "Username or password is wrong!",
+        }); // ignore this error because it works withou spacing)
+        setIsRegistering(false);
+        return;
+      }
+
+      router.replace("signed/trainers");
     },
   });
 
@@ -82,7 +84,7 @@ const RegisterPage = () => {
         className="flex flex-col gap-5 w-full sm:max-w-[399px] items-center"
       >
         <CustomTextField
-          disabled={false}
+          disabled={isRegistering}
           error={Boolean(formik.errors.username)}
           helperText={formik.errors.username ? formik.errors.username : ""}
           label="Username"
@@ -92,7 +94,7 @@ const RegisterPage = () => {
           onChange={onChange}
         />
         <CustomTextField
-          disabled={false}
+          disabled={isRegistering}
           error={Boolean(formik.errors.password)}
           helperText={formik.errors.password ? formik.errors.password : ""}
           label="Password"
@@ -105,6 +107,7 @@ const RegisterPage = () => {
           <Button
             text="Зареєструватися"
             type="text"
+            disabled={isRegistering}
             isWhite
             link="register"
             isSmall
@@ -113,6 +116,7 @@ const RegisterPage = () => {
             text="Увійти"
             type="solid"
             isWhite
+            disabled={isRegistering}
             isSmall
             isSubmit
             icon={
