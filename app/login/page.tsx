@@ -43,6 +43,7 @@ const RegisterPage = () => {
           (val) => val.length >= 8 && val.length <= 20
         ),
     }),
+    validateOnChange: false,
     onSubmit: (value) => {
       const users = localStorage.getItem("users");
 
@@ -76,7 +77,10 @@ const RegisterPage = () => {
 
   return (
     <FormsWrapper title="Login">
-      <form onSubmit={formik.handleSubmit}>
+      <form
+        onSubmit={formik.handleSubmit}
+        className="flex flex-col gap-5 w-full sm:max-w-[399px] items-center"
+      >
         <CustomTextField
           disabled={false}
           error={Boolean(formik.errors.username)}
@@ -97,7 +101,7 @@ const RegisterPage = () => {
           value={formik.values.password}
           onChange={onChange}
         />
-        <div className="flex gap-2 items-center mt-2">
+        <div className="flex gap-2 items-center mt-2 max-sm:flex-col-reverse">
           <Button
             text="Зареєструватися"
             type="text"

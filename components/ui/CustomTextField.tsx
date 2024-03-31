@@ -15,9 +15,10 @@ const CustomTextField = (props: CustomTextFieldProps) => {
   return (
     <div className="flex relative flex-col w-full">
       <p
-        className="px-6 translate-y-1/2"
+        className="mx-6 translate-y-1/2 w-min"
         style={{
           color: props.error ? "#FFD1D1" : "",
+          backgroundColor: props.error ? "#2E1C1C" : "hsla(48,10%,10%,100%)",
         }}
       >
         {props.label}

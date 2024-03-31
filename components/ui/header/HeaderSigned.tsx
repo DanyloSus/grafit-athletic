@@ -51,7 +51,9 @@ const HeaderSigned = () => {
           />
         </SignedLink>
       </nav>
-      <HamButton />
+      <div className="md:hidden">
+        <HamButton />
+      </div>
       <ClientPortal>
         <MobileMenuSigned />
       </ClientPortal>

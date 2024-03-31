@@ -36,7 +36,9 @@ const Header = () => {
         <Link href="#reviews">Відгуки</Link>
         <Link href="#prices">Ціни</Link>
       </nav>
-      <HamButton />
+      <div className="md:hidden">
+        <HamButton />
+      </div>
       <ClientPortal>
         <MobileMenu />
       </ClientPortal>
