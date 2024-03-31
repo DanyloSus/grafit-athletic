@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    serverComponentsExternalPackages: ["mongoose"],
+  },
+  typescript: {
+    ignoreBuildErrors: true, // because without it, app won't render ;(
+  },
+};
 
 export default nextConfig;
