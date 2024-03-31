@@ -1,8 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ClientPortal from "../../wrappers/Portal";
+import MobileMenu from "../MobileMenu";
+import HamButton from "./HamButton";
 
 const Header = () => {
+  console.log("header created");
+
   return (
     <header className="py-my px-mx sm:py-ty sm:px-tx lg:py-pcy lg:px-pcx bg-black w-lvw flex items-center justify-between fixed top-0 left-0 shadow-sm z-50">
       <Link
@@ -31,13 +36,10 @@ const Header = () => {
         <Link href="#reviews">Відгуки</Link>
         <Link href="#prices">Ціни</Link>
       </nav>
-      <Image
-        src="/menu.svg"
-        alt="Hamburger icon"
-        width={31.5}
-        height={21}
-        className="md:hidden block sm:w-10 sm:h-10"
-      />
+      <HamButton />
+      <ClientPortal>
+        <MobileMenu />
+      </ClientPortal>
     </header>
   );
 };

@@ -1,5 +1,5 @@
 import Footer from "@/components/ui/Footer";
-import HeaderSigned from "@/components/ui/HeaderSigned";
+import HeaderSigned from "@/components/ui/header/HeaderSigned";
 import React, { ReactNode } from "react";
 
 type ChildrenProps = {

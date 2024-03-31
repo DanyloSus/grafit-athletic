@@ -1,3 +1,5 @@
+"use client";
+
 import store from "@/lib/redux/store";
 import React, { ReactNode } from "react";
 

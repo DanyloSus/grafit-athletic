@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Dela_Gothic_One, Roboto } from "next/font/google";
 import "./globals.scss";
+import Provider from "@/components/wrappers/Provider";
+import store from "@/lib/redux/store";
 
 const delatGothicOne = Dela_Gothic_One({
   weight: "400",
@@ -29,7 +31,8 @@ export default function RootLayout({
       <body
         className={`${roboto.className} ${roboto.variable} ${delatGothicOne.variable}`}
       >
-        {children}
+        <div id="menu"></div>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

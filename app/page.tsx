@@ -4,7 +4,7 @@ import Prices from "@/components/elements/Prices/Prices";
 import Reviews from "@/components/elements/Reviews/Reviews";
 import Services from "@/components/elements/Services/Services";
 import Footer from "@/components/ui/Footer";
-import Header from "@/components/ui/Header";
+import Header from "@/components/ui/header/Header";
 import React from "react";
 
 const Landing = () => {
