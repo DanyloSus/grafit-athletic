@@ -2,14 +2,16 @@
 
 import Button from "@/components/ui/Button";
 import FormsWrapper from "@/components/wrappers/FormsWrapper";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import CustomTextField from "@/components/ui/CustomTextField";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 const RegisterPage = () => {
+  const [isRegistering, setIsRegistering] = useState(false);
   const router = useRouter();
 
   const formik = useFormik({
@@ -44,38 +46,37 @@ const RegisterPage = () => {
         ),
     }),
     validateOnChange: false,
-    onSubmit: (value) => {
-      const users = localStorage.getItem("users");
+    onSubmit: async (value) => {
+      setIsRegistering(true);
 
-      if (users !== null) {
-        const usersList: {
-          username: string;
-          password: string;
-        }[] = JSON.parse(users);
+      const res = await axios({
+        method: "post",
+        data: { username: value.username },
+        url: "/api/check",
+      }).catch(() => {
+        setIsRegistering(false);
+        return;
+      });
 
-        if (usersList.find((e) => value.username === e.username)) {
-          console.log("exists");
-          formik.setErrors({ username: "User already exists" });
-        } else {
-          usersList.push({
-            username: value.username,
-            password: value.password,
-          });
-          localStorage.setItem("users", JSON.stringify(usersList));
-          router.replace("/signed/trainers");
-        }
-      } else {
-        localStorage.setItem(
-          "users",
-          JSON.stringify([
-            {
-              username: value.username,
-              password: value.password,
-            },
-          ])
-        );
-        router.replace("/signed/trainers");
+      if (!res) {
+        setIsRegistering(false);
+        return;
       }
+
+      if (res.data.user) {
+        formik.setErrors({ username: "Username already exists" });
+        setIsRegistering(false);
+        return;
+      }
+
+      axios({ method: "post", data: value, url: "/api/register" })
+        .then((res) => {
+          router.replace("login");
+        })
+        .catch(() => {
+          setIsRegistering(false);
+          return;
+        });
     },
   });
 
