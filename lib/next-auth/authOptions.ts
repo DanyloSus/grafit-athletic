@@ -48,12 +48,14 @@ export const authOptions: NextAuthOptions = {
         return {
           ...token,
           id: user.id,
+          username: user.username,
         };
       }
       return token;
     },
     async session({ session, token }) {
       session.user.id = token.id;
+      session.user.username = token.username;
       return session;
     },
   },
