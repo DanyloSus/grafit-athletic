@@ -13,8 +13,6 @@ const HamButton = () => {
   return (
     <button
       onClick={() => {
-        console.log("Change menu state");
-
         dispatch(changeMenuState());
       }}
     >

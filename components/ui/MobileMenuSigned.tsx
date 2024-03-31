@@ -8,12 +8,15 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "./Button";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { signOut, useSession } from "next-auth/react";
 
 const MobileMenuSigned = () => {
   const hamState = useSelector((state: Store) => state.ham);
   const dispatch = useDispatch();
 
-  console.log("MM created");
+  const { data: session } = useSession();
+
+  console.log(session);
 
   const closeMenu = () => {
     dispatch(changeMenuState());
@@ -30,9 +33,11 @@ const MobileMenuSigned = () => {
             className="fixed top-0 left-0 overflow-y-auto w-screen h-screen z-40 bg-black pt-[150px] pb-[60px] flex flex-col items-center gap-[39px] font-dela md:hidden"
           >
             <Link
-              href="/"
+              href="#"
               className="flex flex-col gap-2 items-center"
-              onClick={closeMenu}
+              onClick={() => {
+                signOut().finally(() => closeMenu());
+              }}
             >
               <Image
                 src="/User.svg"
@@ -41,7 +46,7 @@ const MobileMenuSigned = () => {
                 height={66.5}
                 className="w-[66.5px] h-[66.5px]"
               />
-              <h4 className="text-2xl">User</h4>
+              <h4 className="text-2xl">{session?.user.username}</h4>
             </Link>
             <div onClick={closeMenu}>
               <Button

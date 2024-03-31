@@ -11,7 +11,7 @@ type TrainerElementProps = {
 
 const TrainerElement = (props: TrainerElementProps) => {
   return (
-    <div className="flex flex-col items-center max-lg:gap-[15px]">
+    <div className="flex flex-col items-center max-lg:gap-[15px] gap-3">
       <div className="relative flex items-center justify-center overflow-visible max-sm:max-w-[207.12px] max-lg:w-[397.51px]">
         <Image
           src={`/${props.bg}.jpg`}

@@ -6,8 +6,6 @@ import MobileMenu from "../MobileMenu";
 import HamButton from "./HamButton";
 
 const Header = () => {
-  console.log("header created");
-
   return (
     <header className="py-my px-mx sm:py-ty sm:px-tx lg:py-pcy lg:px-pcx bg-black w-lvw flex items-center justify-between fixed top-0 left-0 shadow-xl z-50">
       <Link

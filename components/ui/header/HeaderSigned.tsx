@@ -1,9 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import SignedLink from "./SignedLink";
 import HamButton from "./HamButton";
 import ClientPortal from "@/components/wrappers/Portal";
 import MobileMenuSigned from "../MobileMenuSigned";
+import { SessionProvider, signOut } from "next-auth/react";
 
 const HeaderSigned = () => {
   return (
@@ -41,7 +43,11 @@ const HeaderSigned = () => {
         <div className="lg:hidden block">
           <SignedLink link="/signed/contactUs">Зв&apos;язатися</SignedLink>
         </div>
-        <SignedLink link="/">
+        <button
+          onClick={() => {
+            signOut();
+          }}
+        >
           <Image
             src="/User.svg"
             alt="logo"
@@ -49,14 +55,16 @@ const HeaderSigned = () => {
             height={52}
             className="w-[52px] h-[52px]"
           />
-        </SignedLink>
+        </button>
       </nav>
       <div className="md:hidden">
         <HamButton />
       </div>
-      <ClientPortal>
-        <MobileMenuSigned />
-      </ClientPortal>
+      <SessionProvider>
+        <ClientPortal>
+          <MobileMenuSigned />
+        </ClientPortal>
+      </SessionProvider>
     </header>
   );
 };

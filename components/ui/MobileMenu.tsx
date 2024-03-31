@@ -13,8 +13,6 @@ const MobileMenu = () => {
   const hamState = useSelector((state: Store) => state.ham);
   const dispatch = useDispatch();
 
-  console.log("MM created");
-
   const closeMenu = () => {
     dispatch(changeMenuState());
   };
@@ -41,38 +39,42 @@ const MobileMenu = () => {
             <Link href="#prices" className="text-5xl" onClick={closeMenu}>
               Ціни
             </Link>
-            <Button
-              text={"Логін"}
-              isSmall
-              isWhite
-              link="/login"
-              type="solid"
-              icon={
-                <Image
-                  src="/04.svg"
-                  alt="arrow right"
-                  width={32}
-                  height={24}
-                  className="w-[20.48px] h-[15.36px] sm:w-8 sm:h-6"
-                />
-              }
-            />
-            <Button
-              text={"Реєстрація"}
-              isSmall
-              isWhite
-              link="/register"
-              type="outline"
-              icon={
-                <Image
-                  src="/04.svg"
-                  alt="arrow right"
-                  width={32}
-                  height={24}
-                  className="w-[20.48px] h-[15.36px] sm:w-8 sm:h-6"
-                />
-              }
-            />
+            <div onClick={closeMenu}>
+              <Button
+                text={"Логін"}
+                isSmall
+                isWhite
+                link="/login"
+                type="solid"
+                icon={
+                  <Image
+                    src="/04.svg"
+                    alt="arrow right"
+                    width={32}
+                    height={24}
+                    className="w-[20.48px] h-[15.36px] sm:w-8 sm:h-6"
+                  />
+                }
+              />
+            </div>
+            <div onClick={closeMenu}>
+              <Button
+                text={"Реєстрація"}
+                isSmall
+                isWhite
+                link="/register"
+                type="outline"
+                icon={
+                  <Image
+                    src="/04.svg"
+                    alt="arrow right"
+                    width={32}
+                    height={24}
+                    className="w-[20.48px] h-[15.36px] sm:w-8 sm:h-6"
+                  />
+                }
+              />
+            </div>
           </motion.div>
         ) : null}
       </AnimatePresence>
