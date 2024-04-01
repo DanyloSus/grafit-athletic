@@ -1,15 +1,17 @@
+//import from libraries
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
-import { connectMongoDB } from "@/lib/mongodb/mongodb";
-import User from "@/models/User";
+//internal imports
+import { connectMongoDB } from "@/modules/mongodb/mongodb";
+import User from "@/modules/models/User";
 
 export async function POST(req: NextRequest) {
-  await connectMongoDB();
+  await connectMongoDB(); //connect mongodb
 
-  const data = await req.json();
+  const data = await req.json(); //get data
 
-  const { username, password } = data;
+  const { username, password } = data; //destructor
 
   if (
     // server side validation
@@ -24,15 +26,16 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const hashedPasword = await bcrypt.hash(password, 10);
+  const hashedPasword = await bcrypt.hash(password, 10); //hash password
 
+  //update data with hashed password
   const newData = {
     ...data,
     password: hashedPasword,
   };
 
   try {
-    await User.create(newData);
+    await User.create(newData); //create user
 
     console.log("User is created");
 

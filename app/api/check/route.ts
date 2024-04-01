@@ -2,8 +2,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 //internal imports
-import { connectMongoDB } from "@/lib/mongodb/mongodb";
-import User from "@/models/User";
+import { connectMongoDB } from "@/modules/mongodb/mongodb";
+import User from "@/modules/models/User";
 
 export async function POST(req: NextRequest) {
   try {

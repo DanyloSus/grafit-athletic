@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-dela text-white;
+  @apply font-dela text-white; //font-dela is custom in tailwindcss
 }
 
 h2 {
@@ -41,13 +41,14 @@ a {
 
 p,
 button {
-  @apply font-roboto;
+  @apply font-roboto; //font-roboto is custom in tailwindcss
 }
 
 section {
   @apply border-b-[1px] border-b-grey lg:min-h-lvh w-lvw lg:px-pcx sm:px-tx px-mx py-[60px];
 }
 
+//cycle for delay of every animated on scroll element
 @for $i from 1 through 4 {
   .reveal > div:nth-child(#{$i}) {
     transition: 1s all ease-in-out #{calc($i/2)}s;
@@ -55,18 +56,21 @@ section {
 }
 
 @media screen and (min-width: 1024px) {
+  //Y appear
   .reveal > div:nth-child(2n + 1) {
     transform: translateY(150px);
 
     opacity: 0;
   }
 
+  //Y appear
   .reveal > div:nth-child(2n) {
     transform: translateY(-150px);
 
     opacity: 0;
   }
 
+  //Y appear
   .reveal.active > div {
     transform: translateY(0);
 
@@ -83,18 +87,21 @@ section {
 }
 
 @media screen and (min-width: 640px) and (max-width: 1024px) {
+  //X appear
   .reveal > div:nth-child(2n + 1) {
     transform: translateX(150px);
 
     opacity: 0;
   }
 
+  //X appear
   .reveal > div:nth-child(2n) {
     transform: translateX(-150px);
 
     opacity: 0;
   }
 
+  //X appear
   .reveal.active > div {
     transform: translateX(0);
 
@@ -118,12 +125,14 @@ section {
   -webkit-box-orient: vertical;
 }
 
+//spacing between elements in slider
 .slick-slide {
   & > div {
     margin: 0 10px;
   }
 }
 
+//center elements by Y in slider
 .slick-track {
   display: flex !important;
   align-items: center;

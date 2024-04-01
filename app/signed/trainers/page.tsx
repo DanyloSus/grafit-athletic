@@ -1,13 +1,19 @@
+//use reveal needs
 "use client";
 
+//import from libraries
 import React, { useEffect } from "react";
-import TrainerElement from "./trainer";
-import useReveal from "@/lib/hooks/useReveal";
+
+//internal imports
+import useReveal from "@/modules/hooks/useReveal";
+import TrainerElement from "@/components/Trainer";
 
 const Trainers = () => {
+  //changed to variable because useReveal doesn't work in useEffect
   const reveal = useReveal;
 
   useEffect(() => {
+    //check only on start of the page
     reveal();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

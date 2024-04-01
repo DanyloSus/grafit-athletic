@@ -1,6 +1,8 @@
+//import from libraries
+import ProductElement from "@/components/Product";
 import React from "react";
-import ProductElement from "./Product";
 
+//super-puper data
 const products = [
   {
     image: "shaurma",

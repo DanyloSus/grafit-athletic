@@ -1,5 +1,7 @@
+//import from libraries
 import React, { ReactNode } from "react";
 
+//wrapper's children
 type FormsWrapperProps = {
   title: string;
   children: ReactNode;

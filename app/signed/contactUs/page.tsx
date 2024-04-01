@@ -1,3 +1,4 @@
+//import from libraries
 import React from "react";
 import Image from "next/image";
 
@@ -11,7 +12,7 @@ const Page = () => {
           </h2>
           <div className="flex flex-col-reverse sm:flex-row-reverse lg:flex-col justify-between max-sm:items-start max-lg:items-center max-sm:gap-[23px] lg:gap-10">
             <div className="flex flex-col gap-[15px] max-sm:gap-[8px] lg:gap-10">
-              <div className="flex gap-[0.9375rem] items-center lg:justify-start max-lg:flex-row-reverse max-sm:flex-row">
+              <div className="flex gap-[0.9375rem] items-center lg:justify-start max-lg:flex-row-reverse max-lg:text-right max-sm:text-left max-sm:flex-row">
                 <Image
                   src="/location_on.svg"
                   alt="location image"
@@ -22,7 +23,7 @@ const Page = () => {
                   Коблевська вулиця, 39
                 </a>
               </div>
-              <div className="flex gap-[0.9375rem] items-center justify-start max-lg:flex-row-reverse max-sm:flex-row">
+              <div className="flex gap-[0.9375rem] items-center justify-start max-lg:flex-row-reverse max-lg:text-right max-sm:text-left max-sm:flex-row">
                 <Image
                   src="/location_on.svg"
                   alt="location image"
@@ -33,7 +34,7 @@ const Page = () => {
                   Михайла Грушевського, 15а
                 </a>
               </div>
-              <div className="flex gap-[0.9375rem] items-center justify-start max-lg:flex-row-reverse max-sm:flex-row">
+              <div className="flex gap-[0.9375rem] items-center justify-start max-lg:flex-row-reverse max-lg:text-right max-sm:text-left max-sm:flex-row">
                 <Image
                   src="/location_on.svg"
                   alt="location image"

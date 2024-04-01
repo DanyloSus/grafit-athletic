@@ -1,19 +1,22 @@
-import AboutUs from "@/components/elements/AboutUs";
-import Main from "@/components/elements/Main";
-import Prices from "@/components/elements/Prices/Prices";
-import Reviews from "@/components/elements/Reviews/Reviews";
-import Services from "@/components/elements/Services/Services";
-import Footer from "@/components/ui/Footer";
-import Header from "@/components/ui/header/Header";
-import { authOptions } from "@/lib/next-auth/authOptions";
+//import from libraries
+import React from "react";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import React from "react";
+
+//internal imports
+import { authOptions } from "@/modules/next-auth/authOptions";
+import Header from "@/ui/header/Header";
+import Main from "@/components/landings/Main";
+import AboutUs from "@/components/landings/AboutUs";
+import Services from "@/components/landings/Services/Services";
+import Reviews from "@/components/landings/Reviews/Reviews";
+import Prices from "@/components/landings/Prices/Prices";
+import Footer from "@/ui/Footer";
 
 const Landing = async () => {
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions); //get session
 
-  if (session) redirect("/signed/trainers");
+  if (session) redirect("/signed/trainers"); //if user signed then redirect
 
   return (
     <>

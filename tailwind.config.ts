@@ -6,9 +6,12 @@ const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./modules/**/*.{js,ts,jsx,tsx,mdx}",
+    "./ui/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    //custom colors
     colors: {
       ...colors,
       black: "hsla(48,10%,10%,100%)",
@@ -18,11 +21,13 @@ const config: Config = {
       errorBox: "#2E1C1C",
       errorText: "#FFD1D1",
     },
+    //custom fonts
     fontFamily: {
       dela: ["var(--font-dela)"],
       roboto: ["var(--font-roboto)"],
     },
     extend: {
+      //custom spacing
       spacing: {
         pcx: "130px",
         pcy: "10px",

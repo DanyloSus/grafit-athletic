@@ -1,16 +1,20 @@
+//hooks need SSR
 "use client";
 
-import React, { useEffect, useRef } from "react";
+//import from libraries
+import { ReactNode, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
+//portal's children
 type ClientPortalInterface = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const ClientPortal = ({ children }: ClientPortalInterface) => {
-  const [domReady, setDomReady] = React.useState(false);
+  //state to check is elemenent "menu" exists
+  const [domReady, setDomReady] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setDomReady(true);
   }, []);
 
